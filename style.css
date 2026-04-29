@@ -13,6 +13,8 @@ body {
   color: #1d1208;
 }
 
+/* NAV */
+
 .nav {
   position: fixed;
   top: 0;
@@ -76,7 +78,7 @@ body {
   top: 92px;
   left: 22px;
   z-index: 30;
-  width: 210px;
+  width: 230px;
   padding: 18px;
   background: #fffaf2;
   border: 1px solid rgba(255, 160, 60, 0.25);
@@ -99,6 +101,8 @@ body {
   border-radius: 12px;
   background: rgba(255, 179, 71, 0.2);
 }
+
+/* HERO */
 
 .hero {
   position: relative;
@@ -145,12 +149,21 @@ body {
   max-width: 950px;
 }
 
-.mini-text {
+.mini-text,
+.section-label {
+  color: #ff8c00;
+  font-weight: 900;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0 0 14px;
+}
+
+.hero .mini-text {
   color: #ffb347;
   font-size: clamp(14px, 3vw, 22px);
   letter-spacing: 2px;
-  margin: 0 0 18px;
-  font-weight: 800;
+  margin-bottom: 18px;
 }
 
 .brand-title {
@@ -247,94 +260,59 @@ button[type="submit"]:hover {
   }
 }
 
-.recipes {
-  background: #fffaf2;
-  padding: 90px 24px;
-}
+/* SECTIONS */
 
-.section-inner {
-  max-width: 950px;
+.section-inner,
+.devlogs-inner {
+  max-width: 900px;
   margin: 0 auto;
 }
 
-.recipes h2,
+.mission {
+  background: #fffaf2;
+  padding: 95px 24px;
+  border-bottom: 1px solid rgba(91, 54, 20, 0.18);
+}
+
+.about {
+  background: #1a0d05;
+  color: white;
+  padding: 95px 24px;
+  border-bottom: 1px solid rgba(255, 179, 71, 0.22);
+}
+
+.development {
+  background: #fffaf2;
+  padding: 85px 24px 105px;
+}
+
+.mission h2,
 .about h2,
-.devlogs h2 {
+.development h2 {
   font-size: clamp(44px, 9vw, 82px);
   margin: 0 0 32px;
   letter-spacing: -4px;
   line-height: 1;
 }
 
-.recipe-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
-
-.recipe-card {
-  background: white;
-  border: 1px solid rgba(91, 54, 20, 0.12);
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 16px 40px rgba(70, 35, 10, 0.08);
-}
-
-.recipe-card img {
-  width: 100%;
-  height: 230px;
-  object-fit: cover;
-  display: block;
-}
-
-.recipe-card div {
-  padding: 20px;
-}
-
-.tag {
-  color: #ff8c00;
-  font-weight: 900;
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: 0 0 8px;
-}
-
-.recipe-card h3 {
-  font-size: 24px;
-  margin: 0 0 8px;
-  letter-spacing: -1px;
-}
-
-.recipe-card p {
-  color: #6b4a2c;
-  line-height: 1.45;
+.mission p,
+.about p {
+  max-width: 850px;
+  font-size: clamp(19px, 3vw, 28px);
+  line-height: 1.55;
   margin: 0;
-}
-
-.about {
-  background: #1a0d05;
-  color: white;
-  padding: 90px 24px;
+  color: #5c422c;
 }
 
 .about p {
-  max-width: 800px;
-  font-size: clamp(22px, 4vw, 36px);
-  line-height: 1.35;
-  margin: 0;
   color: #ffe0ba;
 }
 
-.devlogs {
-  background: #fffaf2;
-  padding: 80px 24px 100px;
+.about .section-label {
+  color: #ffb347;
 }
 
-.devlogs-inner {
-  max-width: 850px;
-  margin: 0 auto;
-}
+/* DEVELOPMENT LOGS */
 
 .log-card {
   border-top: 1px solid rgba(91, 54, 20, 0.18);
@@ -360,17 +338,15 @@ button[type="submit"]:hover {
 
 .log-card p {
   margin: 0;
-  max-width: 700px;
+  max-width: 760px;
   line-height: 1.65;
   color: #5c422c;
   font-size: 17px;
 }
 
-@media (max-width: 750px) {
-  .recipe-grid {
-    grid-template-columns: 1fr;
-  }
+/* MOBILE */
 
+@media (max-width: 750px) {
   .hero-bg-grid {
     grid-template-columns: 1fr;
   }
@@ -419,9 +395,9 @@ button[type="submit"]:hover {
     width: auto;
   }
 
-  .recipes,
+  .mission,
   .about,
-  .devlogs {
+  .development {
     padding-left: 22px;
     padding-right: 22px;
   }
