@@ -11,12 +11,35 @@
   <section class="hero">
     <div class="hero-content">
       <h1>Learnix</h1>
-      <p class="tagline">Learn real skills through short daily lessons.</p>
 
-      <form class="waitlist">
+      <p class="tagline">
+        Learn real skills through short daily lessons.
+      </p>
+
+      <form class="waitlist" action="https://formspree.io/f/xkoywnwj" method="POST">
         <p>Join waitlist</p>
-        <div class="email-row">
-          <input type="email" placeholder="Enter your email" required />
+
+        <div class="form-stack">
+          <input 
+            type="email" 
+            name="email" 
+            placeholder="Enter your email" 
+            required 
+          />
+
+          <input 
+            type="text" 
+            name="skill" 
+            placeholder="What skill do you want to learn first?" 
+          />
+
+          <select name="interest">
+            <option value="">Would you use Learnix?</option>
+            <option value="Yes">Yes</option>
+            <option value="Maybe">Maybe</option>
+            <option value="No">No</option>
+          </select>
+
           <button type="submit">Join</button>
         </div>
       </form>
@@ -24,15 +47,25 @@
   </section>
 
   <section class="devlogs">
-    <h2>Dev Logs</h2>
+    <div class="devlogs-inner">
+      <h2>Dev Logs</h2>
 
-    <div class="log-card">
-      <p class="date">April 29, 2026</p>
-      <h3>Learnix Created</h3>
-      <p>
-        Learnix has officially started. For now, this site will track early progress,
-        updates, and development announcements.
-      </p>
+      <div class="log-card">
+        <p class="date">April 29, 2026</p>
+        <h3>Creation Announcement</h3>
+        <p>
+          Learnix has officially started. This website will track early updates,
+          development progress, and future announcements.
+        </p>
+      </div>
+
+      <div class="log-card">
+        <p class="date">Coming Soon</p>
+        <h3>More Updates</h3>
+        <p>
+          Future dev logs will appear here as Learnix grows.
+        </p>
+      </div>
     </div>
   </section>
 
