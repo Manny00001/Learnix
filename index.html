@@ -1,9 +1,9 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Learnix</title>
+  <title>GoodEats</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -15,23 +15,30 @@
       <span></span>
     </button>
 
-    <div class="logo">Learnix</div>
+    <div class="logo">GoodEats</div>
   </header>
 
   <div class="side-menu" id="sideMenu">
     <a href="#waitlist">Waitlist</a>
+    <a href="#recipes">Recipes</a>
     <a href="#about">About</a>
     <a href="#devlogs">Dev Logs</a>
   </div>
 
   <section class="hero" id="waitlist">
-    <div class="hero-content">
-      <p class="mini-text">COURSE-STYLE LEARNING, MADE SIMPLE</p>
+    <div class="hero-bg-grid">
+      <img src="images/pizza.jpg" alt="Pizza">
+      <img src="images/breadsticks.jpg" alt="Breadsticks">
+      <img src="images/salad.jpg" alt="Salad">
+    </div>
 
-      <h1 class="brand-title">Learnix</h1>
+    <div class="hero-content">
+      <p class="mini-text">CHEAP, QUICK, GOOD FOOD</p>
+
+      <h1 class="brand-title">GoodEats</h1>
 
       <p class="tagline">
-        Duolingo-style courses for real skills, studying, and self-growth.
+        Find simple meals worth making — from quick snacks to cheap dorm-friendly recipes.
       </p>
 
       <form class="waitlist" id="waitlistForm">
@@ -49,7 +56,7 @@
         </div>
 
         <p class="success-message" id="successMessage">
-          Joined the Learnix Waitlist!
+          Joined the GoodEats Waitlist!
         </p>
       </form>
 
@@ -57,12 +64,47 @@
     </div>
   </section>
 
+  <section class="recipes" id="recipes">
+    <div class="section-inner">
+      <h2>Featured Eats</h2>
+
+      <div class="recipe-grid">
+        <div class="recipe-card">
+          <img src="images/pizza.jpg" alt="Homemade Pizza">
+          <div>
+            <p class="tag">Dinner</p>
+            <h3>Homemade Pizza</h3>
+            <p>Cheesy, crispy, and easy to share.</p>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <img src="images/breadsticks.jpg" alt="Garlic Breadsticks">
+          <div>
+            <p class="tag">Snack</p>
+            <h3>Garlic Breadsticks</h3>
+            <p>Simple comfort food with a golden crust.</p>
+          </div>
+        </div>
+
+        <div class="recipe-card">
+          <img src="images/salad.jpg" alt="Fresh Salad">
+          <div>
+            <p class="tag">Healthy</p>
+            <h3>Fresh Salad Bowl</h3>
+            <p>Light, quick, and packed with color.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="about" id="about">
     <div class="section-inner">
-      <h2>What is Learnix?</h2>
+      <h2>What is GoodEats?</h2>
       <p>
-        Learnix is a course-based learning app where users complete short lessons,
-        earn XP, keep streaks, and progress through skill paths.
+        GoodEats is a food app for discovering simple recipes, quick meals,
+        and cheap eats that normal people actually want to make.
       </p>
     </div>
   </section>
@@ -73,10 +115,10 @@
 
       <div class="log-card">
         <p class="date">April 29, 2026</p>
-        <h3>Creation Announcement</h3>
+        <h3>GoodEats Started</h3>
         <p>
-          Learnix has officially started. This website will track early updates,
-          development progress, and future announcements.
+          GoodEats has officially started. This website will track early updates,
+          recipe previews, and future development.
         </p>
       </div>
 
@@ -84,16 +126,17 @@
         <p class="date">April 29, 2026</p>
         <h3>Waitlist Added</h3>
         <p>
-          The Learnix waitlist is now live. Early users can submit their email to follow
-          development and future launch updates.
+          The GoodEats waitlist is now live. Early users can submit their email
+          to follow the project.
         </p>
       </div>
 
       <div class="log-card">
         <p class="date">Coming Soon</p>
-        <h3>More Updates</h3>
+        <h3>Recipe Uploads</h3>
         <p>
-          Future dev logs will appear here as Learnix grows.
+          Future versions may let users upload recipes, save meals, and browse
+          by budget, time, and cooking tools.
         </p>
       </div>
     </div>
