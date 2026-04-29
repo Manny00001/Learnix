@@ -3,68 +3,136 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Learnix App</title>
+  <title>Learnix</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <main class="app">
+  <header class="nav">
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-    <header class="top-stats">
-      <div class="stat">🧬 <span>1</span></div>
-      <div class="stat faded">🔥 <span>0</span></div>
-      <div class="stat">💎 <span>680</span></div>
-      <div class="stat">⚡ <span>∞</span></div>
-    </header>
+    <div class="logo">Learnix</div>
+  </header>
 
-    <section class="unit-card">
-      <div>
-        <p>SECTION 1, UNIT 1</p>
-        <h1>Biology Basics</h1>
+  <div class="side-menu" id="sideMenu">
+    <a href="#waitlist">Waitlist</a>
+    <a href="#about">About</a>
+    <a href="#devlogs">Dev Logs</a>
+  </div>
+
+  <section class="hero" id="waitlist">
+    <div class="hero-content">
+      <p class="mini-text">COURSE-STYLE LEARNING, MADE SIMPLE</p>
+
+      <h1 class="brand-title">Learnix</h1>
+
+      <p class="tagline">
+        Duolingo-style courses for real skills, studying, and self-growth.
+      </p>
+
+      <form class="waitlist" id="waitlistForm">
+        <p>Join the waitlist</p>
+
+        <div class="email-row">
+          <input
+            type="email"
+            name="email"
+            id="emailInput"
+            placeholder="Enter your email"
+            required
+          />
+          <button type="submit">Join</button>
+        </div>
+
+        <p class="success-message" id="successMessage">
+          Joined the Learnix Waitlist!
+        </p>
+      </form>
+
+      <div class="scroll-down">↓</div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <div class="section-inner">
+      <h2>What is Learnix?</h2>
+      <p>
+        Learnix is a course-based learning app where users complete short lessons,
+        earn XP, keep streaks, and progress through skill paths.
+      </p>
+    </div>
+  </section>
+
+  <section class="devlogs" id="devlogs">
+    <div class="devlogs-inner">
+      <h2>Dev Logs</h2>
+
+      <div class="log-card">
+        <p class="date">April 29, 2026</p>
+        <h3>Creation Announcement</h3>
+        <p>
+          Learnix has officially started. This website will track early updates,
+          development progress, and future announcements.
+        </p>
       </div>
 
-      <button class="unit-btn">☰</button>
-    </section>
+      <div class="log-card">
+        <p class="date">April 29, 2026</p>
+        <h3>Waitlist Added</h3>
+        <p>
+          The Learnix waitlist is now live. Early users can submit their email to follow
+          development and future launch updates.
+        </p>
+      </div>
 
-    <section class="path">
-
-      <button class="lesson active">
-        ★
-      </button>
-
-      <button class="lesson">
-        ★
-      </button>
-
-      <div class="chest">🎁</div>
-
-      <button class="lesson locked">
-        ★
-      </button>
-
-      <div class="boss">🧠</div>
-
-      <button class="lesson locked big">
-        !
-      </button>
-
-    </section>
-
-    <div class="unit-title">
-      <span></span>
-      <p>Cells and Life</p>
-      <span></span>
+      <div class="log-card">
+        <p class="date">Coming Soon</p>
+        <h3>More Updates</h3>
+        <p>
+          Future dev logs will appear here as Learnix grows.
+        </p>
+      </div>
     </div>
+  </section>
 
-  </main>
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const sideMenu = document.getElementById("sideMenu");
 
-  <nav class="bottom-nav">
-    <button class="selected">🏠</button>
-    <button>📚</button>
-    <button>🏆</button>
-    <button>💬</button>
-    <button>⚙️</button>
-  </nav>
+    menuBtn.addEventListener("click", () => {
+      sideMenu.classList.toggle("open");
+      menuBtn.classList.toggle("open");
+    });
+
+    const form = document.getElementById("waitlistForm");
+    const emailInput = document.getElementById("emailInput");
+    const successMessage = document.getElementById("successMessage");
+
+    form.addEventListener("submit", async function(event) {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+
+      await fetch("https://formspree.io/f/xkoywnwj", {
+        method: "POST",
+        body: formData,
+        headers: {
+          "Accept": "application/json"
+        }
+      });
+
+      emailInput.value = "";
+      successMessage.classList.add("show");
+
+      setTimeout(() => {
+        successMessage.classList.remove("show");
+      }, 3000);
+    });
+  </script>
 
 </body>
 </html>
