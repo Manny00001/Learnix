@@ -9,8 +9,8 @@ html {
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background: white;
-  color: black;
+  background: #07030d;
+  color: white;
 }
 
 .nav {
@@ -24,16 +24,17 @@ body {
   align-items: center;
   gap: 22px;
   padding: 0 34px;
-  background: rgba(0, 0, 0, 0.78);
+  background: rgba(7, 3, 13, 0.82);
   backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(173, 96, 255, 0.16);
 }
 
 .menu-btn {
   width: 58px;
   height: 58px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(201, 154, 255, 0.25);
+  border-radius: 12px;
+  background: rgba(173, 96, 255, 0.08);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,7 +47,7 @@ body {
   display: block;
   height: 2px;
   width: 100%;
-  background: #dfff00;
+  background: #c77dff;
   border-radius: 10px;
   transition: 0.25s;
 }
@@ -77,9 +78,10 @@ body {
   z-index: 30;
   width: 210px;
   padding: 18px;
-  background: white;
+  background: #12091f;
+  border: 1px solid rgba(199, 125, 255, 0.2);
   border-radius: 18px;
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.45);
   display: none;
   flex-direction: column;
   gap: 12px;
@@ -90,20 +92,20 @@ body {
 }
 
 .side-menu a {
-  color: black;
+  color: white;
   text-decoration: none;
   font-weight: bold;
   padding: 13px 14px;
   border-radius: 12px;
-  background: #f3f3f3;
+  background: rgba(199, 125, 255, 0.1);
 }
 
 .hero {
   min-height: 100vh;
   background:
-    radial-gradient(circle at 20% 30%, rgba(223, 255, 0, 0.15), transparent 25%),
-    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.12), transparent 24%),
-    linear-gradient(135deg, #000 0%, #060606 45%, #111 100%);
+    radial-gradient(circle at 25% 25%, rgba(157, 78, 221, 0.35), transparent 28%),
+    radial-gradient(circle at 80% 70%, rgba(90, 24, 154, 0.45), transparent 30%),
+    linear-gradient(135deg, #05010a 0%, #10051d 45%, #1b0b2e 100%);
   color: white;
   display: flex;
   align-items: center;
@@ -118,7 +120,7 @@ body {
 }
 
 .mini-text {
-  color: #dfff00;
+  color: #c77dff;
   font-size: clamp(14px, 3vw, 22px);
   letter-spacing: 2px;
   margin: 0 0 18px;
@@ -126,25 +128,12 @@ body {
 
 .brand-title {
   display: inline-block;
-  position: relative;
   font-size: clamp(78px, 21vw, 180px);
   margin: 0;
   letter-spacing: -8px;
   line-height: 0.88;
   font-weight: 900;
-}
-
-.brand-title::after {
-  content: "";
-  position: absolute;
-  height: clamp(12px, 2.2vw, 24px);
-  width: 68%;
-  background: #dfff00;
-  left: 18%;
-  top: 45%;
-  transform: rotate(-10deg);
-  border-radius: 999px;
-  opacity: 0.95;
+  text-shadow: 0 0 35px rgba(199, 125, 255, 0.35);
 }
 
 .tagline {
@@ -152,7 +141,7 @@ body {
   max-width: 760px;
   font-size: clamp(22px, 5vw, 42px);
   line-height: 1.35;
-  color: #f1f1f1;
+  color: #e7d8ff;
   font-weight: 300;
 }
 
@@ -163,7 +152,7 @@ body {
 }
 
 .waitlist > p {
-  color: #dcdcdc;
+  color: #cdb8e9;
   font-size: 18px;
   margin: 0 0 14px;
 }
@@ -178,11 +167,11 @@ input {
   flex: 1;
   min-width: 0;
   padding: 18px 20px;
-  border: none;
+  border: 1px solid rgba(199, 125, 255, 0.25);
   border-radius: 16px;
   outline: none;
   font-size: 17px;
-  background: white;
+  background: rgba(255, 255, 255, 0.95);
   color: black;
 }
 
@@ -190,17 +179,22 @@ button[type="submit"] {
   padding: 18px 28px;
   border: none;
   border-radius: 16px;
-  background: #dfff00;
-  color: black;
+  background: #9d4edd;
+  color: white;
   font-size: 17px;
   font-weight: bold;
   cursor: pointer;
+  box-shadow: 0 0 24px rgba(157, 78, 221, 0.35);
+}
+
+button[type="submit"]:hover {
+  background: #b76dff;
 }
 
 .success-message {
   display: none;
   margin-top: 14px !important;
-  color: #38d66b !important;
+  color: #7cffb2 !important;
   font-size: 15px !important;
   font-weight: bold;
 }
@@ -210,7 +204,7 @@ button[type="submit"] {
 }
 
 .scroll-down {
-  color: #dfff00;
+  color: #c77dff;
   font-size: 54px;
   margin-top: 52px;
   animation: bounce 1.5s infinite;
@@ -227,7 +221,7 @@ button[type="submit"] {
 }
 
 .about {
-  background: white;
+  background: #07030d;
   padding: 90px 24px;
 }
 
@@ -242,6 +236,7 @@ button[type="submit"] {
   margin: 0 0 30px;
   letter-spacing: -4px;
   line-height: 1;
+  color: white;
 }
 
 .about p {
@@ -249,11 +244,11 @@ button[type="submit"] {
   font-size: clamp(22px, 4vw, 36px);
   line-height: 1.35;
   margin: 0;
-  color: #222;
+  color: #d8c4f5;
 }
 
 .devlogs {
-  background: white;
+  background: #0b0413;
   padding: 80px 24px 100px;
 }
 
@@ -263,17 +258,17 @@ button[type="submit"] {
 }
 
 .log-card {
-  border-top: 1px solid #dcdcdc;
+  border-top: 1px solid rgba(199, 125, 255, 0.22);
   padding: 32px 0;
 }
 
 .log-card:last-child {
-  border-bottom: 1px solid #dcdcdc;
+  border-bottom: 1px solid rgba(199, 125, 255, 0.22);
 }
 
 .date {
   font-size: 16px;
-  color: #777;
+  color: #a98bcc;
   margin: 0 0 10px;
 }
 
@@ -281,13 +276,14 @@ button[type="submit"] {
   font-size: clamp(26px, 5vw, 38px);
   margin: 0 0 12px;
   letter-spacing: -1px;
+  color: white;
 }
 
 .log-card p {
   margin: 0;
   max-width: 700px;
   line-height: 1.65;
-  color: #333;
+  color: #d8c4f5;
   font-size: 17px;
 }
 
