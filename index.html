@@ -1,19 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Learnix</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <section class="hero">
-    <h1>Learnix</h1>
-    <p>Learn real skills through short daily lessons.</p>
+    <div class="hero-content">
+      <h1>Learnix</h1>
+      <p class="tagline">Learn real skills through short daily lessons.</p>
 
-    <div class="waitlist">
-      <p class="small-text">Join waitlist</p>
-      <input type="email" placeholder="Enter your email">
-      <button>Join</button>
+      <form class="waitlist">
+        <p>Join waitlist</p>
+        <div class="email-row">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">Join</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="devlogs">
+    <h2>Dev Logs</h2>
+
+    <div class="log-card">
+      <p class="date">April 29, 2026</p>
+      <h3>Learnix Created</h3>
+      <p>
+        Learnix has officially started. For now, this site will track early progress,
+        updates, and development announcements.
+      </p>
     </div>
   </section>
 
