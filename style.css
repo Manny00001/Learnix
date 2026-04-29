@@ -21,7 +21,7 @@ body {
   left: 0;
   width: 100%;
   height: 92px;
-  z-index: 20;
+  z-index: 40;
   display: flex;
   align-items: center;
   gap: 22px;
@@ -73,33 +73,42 @@ body {
   letter-spacing: -4px;
 }
 
+/* DARK DROPDOWN MENU */
+
 .side-menu {
   position: fixed;
   top: 92px;
-  left: 22px;
-  z-index: 30;
-  width: 230px;
-  padding: 18px;
-  background: #fffaf2;
-  border: 1px solid rgba(255, 160, 60, 0.25);
-  border-radius: 18px;
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+  left: 0;
+  right: 0;
+  z-index: 35;
+  padding: 24px 34px 28px;
+  background: rgba(20, 10, 4, 0.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 179, 71, 0.18);
   display: none;
-  flex-direction: column;
-  gap: 12px;
 }
 
 .side-menu.open {
   display: flex;
+  flex-direction: column;
 }
 
 .side-menu a {
-  color: #1d1208;
+  color: #ffe0ba;
   text-decoration: none;
-  font-weight: bold;
-  padding: 13px 14px;
-  border-radius: 12px;
-  background: rgba(255, 179, 71, 0.2);
+  font-size: clamp(28px, 7vw, 54px);
+  font-weight: 900;
+  letter-spacing: -2px;
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(255, 179, 71, 0.22);
+}
+
+.side-menu a:hover {
+  color: #ffb347;
+}
+
+.side-menu a:last-child {
+  border-bottom: none;
 }
 
 /* HERO */
@@ -184,6 +193,8 @@ body {
   color: #fff0dd;
   font-weight: 300;
 }
+
+/* WAITLIST */
 
 .waitlist {
   margin: 48px auto 0;
@@ -312,7 +323,7 @@ button[type="submit"]:hover {
   color: #ffb347;
 }
 
-/* DEVELOPMENT LOGS */
+/* DEVELOPMENT */
 
 .log-card {
   border-top: 1px solid rgba(91, 54, 20, 0.18);
@@ -372,6 +383,16 @@ button[type="submit"]:hover {
     letter-spacing: -3px;
   }
 
+  .side-menu {
+    top: 86px;
+    padding: 22px 24px 26px;
+  }
+
+  .side-menu a {
+    font-size: clamp(30px, 10vw, 50px);
+    padding: 17px 0;
+  }
+
   .hero {
     padding-top: 120px;
   }
@@ -387,12 +408,6 @@ button[type="submit"]:hover {
   input,
   button[type="submit"] {
     width: 100%;
-  }
-
-  .side-menu {
-    left: 20px;
-    right: 20px;
-    width: auto;
   }
 
   .mission,
