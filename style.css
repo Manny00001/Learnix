@@ -1,58 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: white;
+  color: black;
 }
 
 .hero {
+  min-height: 100vh;
   background: black;
   color: white;
-  min-height: 420px;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   padding: 40px 20px;
+  text-align: center;
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 700px;
 }
 
 h1 {
-  font-size: 64px;
+  font-size: clamp(52px, 12vw, 120px);
   margin: 0;
+  letter-spacing: -3px;
 }
 
-.hero > p {
-  font-size: 18px;
-  margin-top: 12px;
+.tagline {
+  font-size: clamp(16px, 3vw, 22px);
   color: #d6d6d6;
+  margin: 14px 0 0;
 }
 
 .waitlist {
-  margin-top: 30px;
+  margin-top: 36px;
 }
 
-.small-text {
+.waitlist p {
   font-size: 14px;
   color: #bdbdbd;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.email-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
 }
 
 input {
-  padding: 14px 16px;
-  width: 260px;
+  width: min(100%, 320px);
+  padding: 15px 16px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   outline: none;
   font-size: 15px;
 }
 
 button {
-  padding: 14px 20px;
-  margin-left: 8px;
+  padding: 15px 22px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   background: white;
   color: black;
   font-weight: bold;
   cursor: pointer;
+}
+
+.devlogs {
+  padding: 70px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.devlogs h2 {
+  font-size: clamp(32px, 6vw, 54px);
+  margin-bottom: 25px;
+}
+
+.log-card {
+  border: 1px solid #e5e5e5;
+  border-radius: 18px;
+  padding: 26px;
+  background: #fafafa;
+}
+
+.date {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 8px;
+}
+
+.log-card h3 {
+  font-size: 26px;
+  margin: 0 0 10px;
+}
+
+.log-card p {
+  line-height: 1.6;
+}
+
+@media (max-width: 520px) {
+  .email-row {
+    flex-direction: column;
+  }
+
+  input,
+  button {
+    width: 100%;
+  }
+
+  .hero {
+    padding: 30px 18px;
+  }
 }
