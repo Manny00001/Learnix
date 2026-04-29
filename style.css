@@ -68,7 +68,6 @@ body {
   font-size: clamp(34px, 8vw, 62px);
   font-weight: 900;
   letter-spacing: -4px;
-  position: relative;
 }
 
 .side-menu {
@@ -140,22 +139,12 @@ body {
   position: absolute;
   height: clamp(12px, 2.2vw, 24px);
   width: 68%;
-  background: white;
+  background: #dfff00;
   left: 18%;
   top: 45%;
   transform: rotate(-10deg);
   border-radius: 999px;
-  mix-blend-mode: difference;
-}
-
-.brand-title::before {
-  content: "°";
-  position: absolute;
-  right: -34px;
-  top: -16px;
-  color: #dfff00;
-  font-size: clamp(42px, 8vw, 80px);
-  letter-spacing: 0;
+  opacity: 0.95;
 }
 
 .tagline {
@@ -323,11 +312,6 @@ button[type="submit"] {
 
   .brand-title {
     letter-spacing: -5px;
-  }
-
-  .brand-title::before {
-    right: -22px;
-    top: -10px;
   }
 
   .email-row {
