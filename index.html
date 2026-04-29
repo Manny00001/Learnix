@@ -8,24 +8,42 @@
 </head>
 <body>
 
-  <section class="hero">
+  <header class="nav">
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="logo">Learnix</div>
+  </header>
+
+  <div class="side-menu" id="sideMenu">
+    <a href="#waitlist">Waitlist</a>
+    <a href="#devlogs">Dev Logs</a>
+    <a href="#about">About</a>
+  </div>
+
+  <section class="hero" id="waitlist">
     <div class="hero-content">
-      <h1>Learnix</h1>
+      <p class="mini-text">COURSE-STYLE LEARNING, MADE SIMPLE</p>
+
+      <h1 class="brand-title">Learnix</h1>
 
       <p class="tagline">
-        Learn real skills through short daily lessons.
+        Duolingo-style courses for real skills, studying, and self-growth.
       </p>
 
       <form class="waitlist" id="waitlistForm">
-        <p>Join waitlist</p>
+        <p>Join the waitlist</p>
 
         <div class="email-row">
-          <input 
-            type="email" 
-            name="email" 
+          <input
+            type="email"
+            name="email"
             id="emailInput"
-            placeholder="Enter your email" 
-            required 
+            placeholder="Enter your email"
+            required
           />
           <button type="submit">Join</button>
         </div>
@@ -34,10 +52,22 @@
           Joined the Learnix Waitlist!
         </p>
       </form>
+
+      <div class="scroll-down">↓</div>
     </div>
   </section>
 
-  <section class="devlogs">
+  <section class="about" id="about">
+    <div class="section-inner">
+      <h2>What is Learnix?</h2>
+      <p>
+        Learnix is a course-based learning app where users complete short lessons,
+        earn XP, keep streaks, and progress through skill paths.
+      </p>
+    </div>
+  </section>
+
+  <section class="devlogs" id="devlogs">
     <div class="devlogs-inner">
       <h2>Dev Logs</h2>
 
@@ -47,6 +77,15 @@
         <p>
           Learnix has officially started. This website will track early updates,
           development progress, and future announcements.
+        </p>
+      </div>
+
+      <div class="log-card">
+        <p class="date">April 29, 2026</p>
+        <h3>Waitlist Added</h3>
+        <p>
+          The Learnix waitlist is now live. Early users can submit their email to follow
+          development and future launch updates.
         </p>
       </div>
 
@@ -61,6 +100,14 @@
   </section>
 
   <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const sideMenu = document.getElementById("sideMenu");
+
+    menuBtn.addEventListener("click", () => {
+      sideMenu.classList.toggle("open");
+      menuBtn.classList.toggle("open");
+    });
+
     const form = document.getElementById("waitlistForm");
     const emailInput = document.getElementById("emailInput");
     const successMessage = document.getElementById("successMessage");
