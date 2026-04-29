@@ -71,19 +71,6 @@ body {
   position: relative;
 }
 
-.logo::after {
-  content: "";
-  position: absolute;
-  height: 10px;
-  width: 44%;
-  background: #dfff00;
-  right: -8px;
-  top: 17px;
-  transform: rotate(-12deg);
-  border-radius: 999px;
-  opacity: 0.95;
-}
-
 .side-menu {
   position: fixed;
   top: 92px;
