@@ -326,6 +326,28 @@ button[type="submit"] {
   padding-bottom: 6px;
 }
 
+.donate-btn {
+  display: inline-block;
+  margin-top: 26px;
+  background: #ffb347;
+  color: #1a0d05;
+  font-size: 18px;
+  font-weight: 900;
+  text-decoration: none;
+  padding: 14px 22px;
+  border-radius: 999px;
+}
+
+.donate-btn:hover {
+  background: #ffc56f;
+}
+
+.test-note {
+  margin-top: 16px !important;
+  color: #caa77f !important;
+  font-size: 14px !important;
+}
+
 .log-card {
   border-top: 1px solid rgba(91, 54, 20, 0.18);
   padding: 32px 0;
