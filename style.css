@@ -13,8 +13,6 @@ body {
   color: #1d1208;
 }
 
-/* NAV */
-
 .nav {
   position: fixed;
   top: 0;
@@ -73,15 +71,13 @@ body {
   letter-spacing: -4px;
 }
 
-/* DARK DROPDOWN MENU */
-
 .side-menu {
   position: fixed;
   top: 92px;
   left: 0;
   right: 0;
   z-index: 35;
-  padding: 24px 34px 28px;
+  padding: 16px 34px 18px;
   background: rgba(20, 10, 4, 0.94);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(255, 179, 71, 0.18);
@@ -96,11 +92,11 @@ body {
 .side-menu a {
   color: #ffe0ba;
   text-decoration: none;
-  font-size: clamp(28px, 7vw, 54px);
+  font-size: clamp(18px, 4vw, 30px);
   font-weight: 900;
-  letter-spacing: -2px;
-  padding: 18px 0;
-  border-bottom: 1px solid rgba(255, 179, 71, 0.22);
+  letter-spacing: -1px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 179, 71, 0.18);
 }
 
 .side-menu a:hover {
@@ -110,8 +106,6 @@ body {
 .side-menu a:last-child {
   border-bottom: none;
 }
-
-/* HERO */
 
 .hero {
   position: relative;
@@ -194,8 +188,6 @@ body {
   font-weight: 300;
 }
 
-/* WAITLIST */
-
 .waitlist {
   margin: 48px auto 0;
   width: 100%;
@@ -238,10 +230,6 @@ button[type="submit"] {
   box-shadow: 0 0 24px rgba(255, 159, 28, 0.35);
 }
 
-button[type="submit"]:hover {
-  background: #ffb347;
-}
-
 .success-message {
   display: none;
   margin-top: 14px !important;
@@ -262,19 +250,12 @@ button[type="submit"]:hover {
 }
 
 @keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-
   50% {
     transform: translateY(12px);
   }
 }
 
-/* SECTIONS */
-
-.section-inner,
-.devlogs-inner {
+.section-inner {
   max-width: 900px;
   margin: 0 auto;
 }
@@ -297,9 +278,17 @@ button[type="submit"]:hover {
   padding: 85px 24px 105px;
 }
 
+.support {
+  background: #1a0d05;
+  color: white;
+  padding: 85px 24px 95px;
+  border-top: 1px solid rgba(255, 179, 71, 0.22);
+}
+
 .mission h2,
 .about h2,
-.development h2 {
+.development h2,
+.support h2 {
   font-size: clamp(44px, 9vw, 82px);
   margin: 0 0 32px;
   letter-spacing: -4px;
@@ -307,7 +296,8 @@ button[type="submit"]:hover {
 }
 
 .mission p,
-.about p {
+.about p,
+.support p {
   max-width: 850px;
   font-size: clamp(19px, 3vw, 28px);
   line-height: 1.55;
@@ -315,15 +305,26 @@ button[type="submit"]:hover {
   color: #5c422c;
 }
 
-.about p {
+.about p,
+.support p {
   color: #ffe0ba;
 }
 
-.about .section-label {
+.about .section-label,
+.support .section-label {
   color: #ffb347;
 }
 
-/* DEVELOPMENT */
+.support-email {
+  display: inline-block;
+  margin-top: 24px;
+  color: #ffb347;
+  font-size: clamp(20px, 4vw, 34px);
+  font-weight: 900;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(255, 179, 71, 0.5);
+  padding-bottom: 6px;
+}
 
 .log-card {
   border-top: 1px solid rgba(91, 54, 20, 0.18);
@@ -355,8 +356,6 @@ button[type="submit"]:hover {
   font-size: 17px;
 }
 
-/* MOBILE */
-
 @media (max-width: 750px) {
   .hero-bg-grid {
     grid-template-columns: 1fr;
@@ -385,12 +384,12 @@ button[type="submit"]:hover {
 
   .side-menu {
     top: 86px;
-    padding: 22px 24px 26px;
+    padding: 14px 24px 16px;
   }
 
   .side-menu a {
-    font-size: clamp(30px, 10vw, 50px);
-    padding: 17px 0;
+    font-size: 22px;
+    padding: 11px 0;
   }
 
   .hero {
@@ -412,7 +411,8 @@ button[type="submit"]:hover {
 
   .mission,
   .about,
-  .development {
+  .development,
+  .support {
     padding-left: 22px;
     padding-right: 22px;
   }
